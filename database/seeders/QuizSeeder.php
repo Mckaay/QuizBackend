@@ -11,9 +11,6 @@ use Illuminate\Database\Seeder;
 
 final class QuizSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
         Quiz::factory()->has(
