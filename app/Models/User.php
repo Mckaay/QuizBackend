@@ -12,7 +12,6 @@ use Illuminate\Notifications\Notifiable;
 
 final class User extends Authenticatable
 {
-    /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory;
     use HasUlids;
     use Notifiable;
@@ -36,6 +35,7 @@ final class User extends Authenticatable
     protected $hidden = [
         'password',
         'remember_token',
+        'is_admin',
     ];
 
     /**

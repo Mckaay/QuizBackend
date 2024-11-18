@@ -22,7 +22,7 @@ final class AppServiceProvider extends ServiceProvider
     {
         ResetPassword::createUrlUsing(fn(object $notifiable, string $token) => config('app.frontend_url') . "/password-reset/{$token}?email={$notifiable->getEmailForPasswordReset()}");
         Model::shouldBeStrict(
-            app()->isLocal(),
+            shouldBeStrict: true,
         );
     }
 }
