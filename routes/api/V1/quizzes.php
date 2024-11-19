@@ -11,8 +11,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::prefix('quizzes')->name('quizzes:')->group(function (): void {
     Route::get('/', IndexController::class)->name('index');
-    Route::post('/', StoreController::class)->name('store');
     Route::get('{quiz}', ShowController::class)->name('show');
-    Route::put('{quiz}', UpdateController::class)->name('update');
-    Route::delete('{quiz}', DeleteController::class)->name('delete');
+
+    Route::middleware('auth:sanctum')->group(function (): void {
+        Route::post('/', StoreController::class)->name('store');
+        Route::put('{quiz}', UpdateController::class)->name('update');
+        Route::delete('{quiz}', DeleteController::class)->name('delete');
+    });
 });

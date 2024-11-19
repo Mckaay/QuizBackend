@@ -12,6 +12,7 @@ final class QuizCollection extends ResourceCollection
     public function toArray(Request $request): array
     {
         return [
+            'status' => 'success',
             'data' => $this->collection,
         ];
     }

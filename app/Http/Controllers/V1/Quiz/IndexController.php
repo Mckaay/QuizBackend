@@ -7,16 +7,13 @@ namespace App\Http\Controllers\V1\Quiz;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\V1\Quiz\QuizCollection;
 use App\Models\Quiz;
-use Illuminate\Http\Resources\Json\ResourceCollection;
+use Illuminate\Http\Request;
+use Illuminate\Http\Resources\Json\JsonResource;
 
 final class IndexController extends Controller
 {
-    public function __invoke(): ResourceCollection
+    public function __invoke(Request $request): JsonResource
     {
-        $quizzes = Quiz::simplePaginate();
-
-        return new QuizCollection(
-            resource: $quizzes,
-        );
+        return new QuizCollection(resource: Quiz::paginate(15));
     }
 }
