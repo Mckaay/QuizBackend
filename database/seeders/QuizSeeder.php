@@ -15,9 +15,9 @@ final class QuizSeeder extends Seeder
     {
         Quiz::factory()->has(
             Question::factory()->has(Answer::factory()->count(4))
-                ->count(10),
+                ->count(5),
         )
-            ->count(40)
+            ->count(5)
             ->create();
     }
 }

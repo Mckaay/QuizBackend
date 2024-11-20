@@ -16,6 +16,7 @@ final class DatabaseSeeder extends Seeder
             attributes: [
                 'email' => 'admin@admin.com',
                 'name' => 'test',
+                'is_admin' => true,
             ],
         );
 

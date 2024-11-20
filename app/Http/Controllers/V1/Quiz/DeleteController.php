@@ -5,18 +5,25 @@ declare(strict_types=1);
 namespace App\Http\Controllers\V1\Quiz;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Quiz\DeleteQuizRequest;
 use App\Models\Quiz;
+use App\Repositories\Quiz\QuizRepository;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Response;
-use Illuminate\Support\Facades\DB;
+use Symfony\Component\HttpFoundation\Response as ResponseAlias;
 
 final class DeleteController extends Controller
 {
-    public function __invoke(Quiz $quiz): JsonResponse
+    public function __invoke(DeleteQuizRequest $request, Quiz $quiz, QuizRepository $quizRepository): JsonResponse
     {
-        DB::transaction(function () use ($quiz): void {
-            $quiz->delete();
-        });
+        $deleted = $quizRepository->destroy($quiz);
+
+        if ( ! $deleted) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Quiz not found.',
+            ], ResponseAlias::HTTP_NOT_FOUND);
+        }
 
         return response()->json(
             data: [

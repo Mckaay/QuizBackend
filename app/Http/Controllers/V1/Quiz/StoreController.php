@@ -5,19 +5,15 @@ declare(strict_types=1);
 namespace App\Http\Controllers\V1\Quiz;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreQuizRequest;
-use App\Models\Quiz;
-use Illuminate\Http\JsonResponse;
+use App\Http\Requests\Quiz\StoreQuizRequest;
+use App\Repositories\Quiz\QuizRepository;
 use Illuminate\Http\Response;
-use Illuminate\Support\Facades\DB;
 
 final class StoreController extends Controller
 {
-    public function __invoke(StoreQuizRequest $request): JsonResponse
+    public function __invoke(StoreQuizRequest $request, QuizRepository $quizRepository)
     {
-        DB::transaction(callback: function () use ($request): void {
-            $quiz = Quiz::create($request->validated());
-        });
+        $quizRepository->store(data: $request->validated());
 
         return response()->json(
             data: [
