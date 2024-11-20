@@ -12,13 +12,20 @@ final class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
-        User::factory()->create(
-            attributes: [
+        collect([
+            [
                 'email' => 'admin@admin.com',
                 'name' => 'test',
                 'is_admin' => true,
             ],
-        );
+            [
+                'email' => 'test@test.com',
+                'name' => 'test',
+                'is_admin' => false,
+            ],
+        ])->each(function ($userData): void {
+            User::factory()->create($userData);
+        });
 
         if (App::isLocal()) {
             $this->call(

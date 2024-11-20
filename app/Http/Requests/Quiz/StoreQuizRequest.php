@@ -47,10 +47,10 @@ final class StoreQuizRequest extends FormRequest
 
     public function prepareForValidation(): void
     {
-        $decodedQuestions = json_decode($this->questions, true);
-
-        $this->merge([
-            'questions' => $decodedQuestions,
-        ]);
+        if (is_string($this->questions)) {
+            $this->merge([
+                'questions' => json_decode($this->questions, true),
+            ]);
+        }
     }
 }

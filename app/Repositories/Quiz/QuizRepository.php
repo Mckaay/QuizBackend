@@ -14,15 +14,14 @@ final class QuizRepository implements QuizRepositoryInterface
 {
     public function getAll(): QuizCollection
     {
-        $quizzes = QueryBuilder::for(subject: Quiz::class)
-            ->allowedIncludes(
-                includes: [
-                    'questions',
-                    'questions.answers',
-                ],
-            )->getEloquentBuilder()->simplePaginate(perPage: 10);
+        $quizzes = QueryBuilder::for(Quiz::class)
+            ->allowedIncludes([
+                'questions',
+                'questions.answers',
+            ])
+            ->getEloquentBuilder()->paginate(5);
 
-        return new QuizCollection(resource: $quizzes);
+        return new QuizCollection($quizzes);
     }
 
     public function show(Quiz $quiz): QuizResource
