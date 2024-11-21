@@ -79,4 +79,14 @@ final class QuizRepository implements QuizRepositoryInterface
     {
         return DB::transaction(callback: fn() => $quiz->delete());
     }
+
+    public function search(string $query): QuizCollection
+    {
+        $foundQuizzes = Quiz::query()
+            ->where('title', 'LIKE', "%{$query}%")
+            ->orderBy('created_at', 'desc')
+            ->paginate(5);
+
+        return new QuizCollection($foundQuizzes);
+    }
 }

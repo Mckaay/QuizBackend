@@ -59,7 +59,7 @@ final class QuizTest extends TestCase
             'title' => 'Test Title',
             'questions' => [
                 [
-                    'content' => 'blabla',
+                    'content' => 'first question',
                     'answers' => [
                         ['content' => 'Nice answer', 'is_correct' => false],
                         ['content' => 'Another answer', 'is_correct' => true],
