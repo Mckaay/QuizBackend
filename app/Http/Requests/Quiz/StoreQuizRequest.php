@@ -15,7 +15,7 @@ final class StoreQuizRequest extends FormRequest
     {
         return [
             'title' => 'required|unique:quizzes|max:255|string',
-            'questions' => 'required|array',
+            'questions' => 'required|array|min:2|max:10',
             'questions.*.content' => 'required|string',
             'questions.*.answers' => 'required|array|min:4|max:5',
         ];
@@ -43,14 +43,5 @@ final class StoreQuizRequest extends FormRequest
             'message'   => 'Validation errors',
             'data'      => $validator->errors(),
         ]));
-    }
-
-    public function prepareForValidation(): void
-    {
-        if (is_string($this->questions)) {
-            $this->merge([
-                'questions' => json_decode($this->questions, true),
-            ]);
-        }
     }
 }

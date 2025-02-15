@@ -24,7 +24,7 @@ final class QuizTest extends TestCase
 
     public function test_if_guest_can_create_quiz(): void
     {
-        $this->postJson(route('quizzes:store'), [
+        $this->postJson(route('quiz:store'), [
             'title' => 'Test Quiz',
 
         ])->assertStatus(401);
@@ -32,20 +32,20 @@ final class QuizTest extends TestCase
 
     public function test_if_guest_can_see_list_of_quizzes(): void
     {
-        $this->getJson(route('quizzes:index'))
+        $this->getJson(route('quiz:index'))
             ->assertStatus(200)
             ->assertJsonStructure(['data']);
     }
 
     public function test_if_guest_can_delete_quiz(): void
     {
-        $this->deleteJson(route('quizzes:delete', ['quiz' => 1]))
+        $this->deleteJson(route('quiz:delete', ['quiz' => 1]))
             ->assertStatus(401);
     }
 
     public function test_if_guest_can_update_quiz(): void
     {
-        $this->putJson(route('quizzes:update', ['quiz' => 1]))
+        $this->putJson(route('quiz:update', ['quiz' => 1]))
             ->assertStatus(401);
     }
 
@@ -79,7 +79,7 @@ final class QuizTest extends TestCase
             ],
         ];
 
-        $this->actingAs($user)->postJson(route('quizzes:store'), $data)->assertStatus(201);
+        $this->actingAs($user)->postJson(route('quiz:store'), $data)->assertStatus(201);
         $this->assertDatabaseHas('quizzes', ['title' => 'Test Title']);
         $this->assertDatabaseHas('questions', ['content' => 'second question']);
         $this->assertDatabaseHas('answers', ['content' => 'Nice answer', 'is_correct' => false]);

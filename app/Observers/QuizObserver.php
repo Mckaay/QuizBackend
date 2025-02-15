@@ -11,20 +11,20 @@ final class QuizObserver
 {
     public function created(Quiz $quiz): void
     {
-        $this->clearQuizCache();
+        $this->clearCache();
     }
 
     public function updated(Quiz $quiz): void
     {
-        $this->clearQuizCache();
+        $this->clearCache();
     }
 
     public function deleted(Quiz $quiz): void
     {
-        $this->clearQuizCache();
+        $this->clearCache();
     }
 
-    public function clearQuizCache(): void
+    public function clearCache(): void
     {
         Cache::tags(['quiz', 'quizzes'])->flush();
     }

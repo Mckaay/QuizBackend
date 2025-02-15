@@ -17,11 +17,6 @@ final class Quiz extends Model
     use HasFactory;
     use HasUlids;
 
-    protected $fillable = [
-        'title',
-        'icon',
-    ];
-
     public function questions(): HasMany
     {
         return $this->hasMany(Question::class);

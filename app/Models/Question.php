@@ -15,10 +15,6 @@ final class Question extends Model
     use HasFactory;
     use HasUlids;
 
-    protected $fillable = [
-        'content',
-    ];
-
     public function quiz(): BelongsTo
     {
         return $this->belongsTo(Quiz::class);

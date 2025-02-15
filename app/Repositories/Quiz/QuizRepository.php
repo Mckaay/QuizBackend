@@ -38,7 +38,6 @@ final class QuizRepository implements QuizRepositoryInterface
         return DB::transaction(callback: function () use ($data) {
             $quiz = Quiz::create([
                 'title' => $data['title'],
-                'icon' => $data['icon'] ?? null,
             ]);
 
             foreach ($data['questions'] as $questionData) {

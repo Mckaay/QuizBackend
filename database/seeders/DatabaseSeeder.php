@@ -6,7 +6,6 @@ namespace Database\Seeders;
 
 use App\Models\User;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\App;
 
 final class DatabaseSeeder extends Seeder
 {
@@ -27,12 +26,6 @@ final class DatabaseSeeder extends Seeder
             User::factory()->create($userData);
         });
 
-        if (App::isLocal()) {
-            $this->call(
-                class: [
-                    QuizSeeder::class,
-                ],
-            );
-        }
+        $this->call([QuizSeeder::class]);
     }
 }

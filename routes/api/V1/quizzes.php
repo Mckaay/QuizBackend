@@ -10,10 +10,11 @@ use App\Http\Controllers\V1\Quiz\StoreController;
 use App\Http\Controllers\V1\Quiz\UpdateController;
 use Illuminate\Support\Facades\Route;
 
-Route::prefix('quizzes')->name('quizzes:')->group(function (): void {
+Route::prefix('quiz')->name('quiz:')->group(function (): void {
     Route::get('/', IndexController::class)->name('index');
     Route::get('/search', SearchController::class)->name('search');
     Route::get('{quiz}', ShowController::class)->name('show');
+    Route::post('/', StoreController::class)->name('store');
 
     Route::middleware('auth:sanctum')->group(function (): void {
         Route::post('/', StoreController::class)->name('store');

@@ -12,7 +12,6 @@ return new class () extends Migration {
         Schema::create('quizzes', function (Blueprint $table): void {
             $table->ulid('id')->primary();
             $table->string('title', 255);
-            $table->text('icon')->nullable();
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
         });

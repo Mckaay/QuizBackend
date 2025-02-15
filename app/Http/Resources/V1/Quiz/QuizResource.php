@@ -22,7 +22,6 @@ final class QuizResource extends JsonResource
                     relationship: 'questions',
                 ),
             ),
-            'icon' => $this->icon ?? 'no-icon',
         ];
     }
 }
