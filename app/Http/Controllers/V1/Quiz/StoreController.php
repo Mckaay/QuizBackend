@@ -7,11 +7,12 @@ namespace App\Http\Controllers\V1\Quiz;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Quiz\StoreQuizRequest;
 use App\Repositories\Quiz\QuizRepository;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Response;
 
 final class StoreController extends Controller
 {
-    public function __invoke(StoreQuizRequest $request, QuizRepository $quizRepository)
+    public function __invoke(StoreQuizRequest $request, QuizRepository $quizRepository): JsonResponse
     {
         $quizRepository->store(data: $request->validated());
 

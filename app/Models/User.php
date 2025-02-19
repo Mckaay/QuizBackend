@@ -19,12 +19,15 @@ final class User extends Authenticatable
         'name',
         'email',
         'password',
-        'is_admin',
     ];
 
     protected $hidden = [
         'password',
         'remember_token',
+        'is_admin',
+    ];
+
+    protected $guarded = [
         'is_admin',
     ];
 
