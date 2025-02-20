@@ -5,18 +5,23 @@ declare(strict_types=1);
 namespace App\Http\Controllers\V1\Quiz;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\V1\Quiz\QuizResource;
 use App\Repositories\Quiz\QuizRepository;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Cache;
+use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
 final class IndexController extends Controller
 {
-    public function __invoke(Request $request, QuizRepository $quizRepository)
+    public function __invoke(Request $request, QuizRepository $quizRepository): AnonymousResourceCollection
     {
-        $includes = $request->query('include', '');
-        $page = $request->query('page', '1');
-        $cacheKey = 'quizzes' . $includes . $page;
+        $validated = $request->validate([
+            'searchQuery' => 'nullable|string|max:100',
+        ]);
 
-        return Cache::tags(['quiz', 'quizzes'])->rememberForever($cacheKey, fn() => $quizRepository->getAll());
+        $searchQuery = $validated['searchQuery'] ?? '';
+
+        return QuizResource::collection(
+            $quizRepository->getAll(searchQuery: $searchQuery),
+        );
     }
 }

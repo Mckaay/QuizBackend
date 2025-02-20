@@ -17,6 +17,10 @@ final class QuizResource extends JsonResource
         return [
             'id' => $this->id,
             'title' => $this->title,
+            'description' => $this->description,
+            'time' => $this->time,
+            'timesPlayed' => $this->timesPlayed,
+            'numberOfQuestions' => $this->questions_count ?? 0,
             'questions' => QuestionResource::collection(
                 resource: $this->whenLoaded(
                     relationship: 'questions',

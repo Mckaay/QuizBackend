@@ -20,13 +20,4 @@ final class QuestionFactory extends Factory
             'content' => $this->faker->sentence() . '?',
         ];
     }
-
-    public function configure(): static
-    {
-        return $this->afterCreating(function (Question $question): void {
-            $answer = $question->answers()->first();
-            $answer->is_correct = true;
-            $answer->save();
-        });
-    }
 }

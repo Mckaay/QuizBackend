@@ -2,11 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Feature;
+namespace Tests\Feature;
 
+use App\Models\Quiz;
 use App\Models\User;
+use Database\Seeders\DatabaseSeeder;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Support\Facades\Route;
 use Tests\TestCase;
 
 final class QuizTest extends TestCase
@@ -17,9 +18,12 @@ final class QuizTest extends TestCase
     {
         parent::setUp();
 
-        Route::middleware('auth:sanctum')->group(function (): void {
-            require base_path('routes/web.php');
-        });
+        $this->seed(DatabaseSeeder::class);
+    }
+
+    public function test_if_there_is_at_least_5_quizzes_after_seeding(): void
+    {
+        $this->assertTrue(Quiz::all()->count() > 5);
     }
 
     public function test_if_guest_can_create_quiz(): void
@@ -57,6 +61,8 @@ final class QuizTest extends TestCase
 
         $data = [
             'title' => 'Test Title',
+            'time' => "10",
+            'description' => 'Test Description',
             'questions' => [
                 [
                     'content' => 'first question',
@@ -83,5 +89,21 @@ final class QuizTest extends TestCase
         $this->assertDatabaseHas('quizzes', ['title' => 'Test Title']);
         $this->assertDatabaseHas('questions', ['content' => 'second question']);
         $this->assertDatabaseHas('answers', ['content' => 'Nice answer', 'is_correct' => false]);
+    }
+
+    public function test_if_increment_works_correctly_when_visiting_endpoint(): void
+    {
+        $quiz = Quiz::first();
+        $this->assertEquals(0, $quiz->timesPlayed);
+        $this->get(route('quiz:increment', [$quiz->id]))->assertStatus(204);
+        $updatedQuiz = Quiz::first();
+        $this->assertEquals(1, $updatedQuiz->timesPlayed);
+    }
+
+    public function test_if_search_parameter_works_correctly(): void
+    {
+        $quiz = Quiz::first();
+        $data = $this->getJson(route('quiz:index', ['searchQuery' => $quiz->title]))->json();
+        $this->assertCount(1, $data['data']);
     }
 }

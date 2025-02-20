@@ -13,11 +13,37 @@ final class QuizSeeder extends Seeder
 {
     public function run(): void
     {
-        Quiz::factory()->has(
-            Question::factory()->has(Answer::factory()->count(4))
-                ->count(10),
-        )
-            ->count(50)
-            ->create();
+        $filePath = database_path('json/quizzes.json');
+        if ( ! file_exists($filePath)) {
+            return;
+        }
+
+        $quizzes = json_decode(file_get_contents($filePath), true);
+        if (empty($quizzes)) {
+            return;
+        }
+
+        foreach ($quizzes as $quizData) {
+            $quiz = Quiz::factory()->create([
+                'title' => $quizData['title'],
+                'description' => $quizData['description'],
+                'time' => $quizData['time'],
+            ]);
+
+            foreach ($quizData['questions'] as $questionData) {
+                $question = Question::factory()->create([
+                    'quiz_id' => $quiz->id,
+                    'content' => $questionData['text'],
+                ]);
+
+                foreach ($questionData['answers'] as $answerData) {
+                    Answer::factory()->create([
+                        'question_id' => $question->id,
+                        'content' => $answerData['text'],
+                        'is_correct' => $answerData['isCorrect'],
+                    ]);
+                }
+            }
+        }
     }
 }

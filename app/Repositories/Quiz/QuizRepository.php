@@ -4,33 +4,29 @@ declare(strict_types=1);
 
 namespace App\Repositories\Quiz;
 
-use App\Http\Resources\V1\Quiz\QuizCollection;
-use App\Http\Resources\V1\Quiz\QuizResource;
 use App\Models\Quiz;
 use DB;
-use Spatie\QueryBuilder\QueryBuilder;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 final class QuizRepository implements QuizRepositoryInterface
 {
-    public function getAll(): QuizCollection
+    public function getAll(int $page = 1, string $searchQuery = ''): LengthAwarePaginator
     {
-        $quizzes = QueryBuilder::for(Quiz::class)
-            ->allowedIncludes([
-                'questions',
-                'questions.answers',
-            ])
-            ->getEloquentBuilder()->paginate(5);
-
-        return new QuizCollection($quizzes);
+        return Quiz::query()
+            ->when($searchQuery, function ($query) use ($searchQuery): void {
+                $query->where('title', 'like', '%' . $searchQuery . '%');
+            })
+            ->withCount('questions')
+            ->paginate(5);
     }
 
-    public function show(Quiz $quiz): QuizResource
+    public function show(Quiz $quiz): Quiz
     {
-        $quiz->load(relations: [
-            'questions',
-            'questions.answers',
-        ]);
-        return new QuizResource($quiz);
+        return Quiz::query()
+            ->where('id', '=', $quiz->id)
+            ->with(['questions', 'questions.answers'])
+            ->withCount('questions')
+            ->first();
     }
 
     public function store(array $data): ?bool
@@ -38,6 +34,8 @@ final class QuizRepository implements QuizRepositoryInterface
         return DB::transaction(callback: function () use ($data) {
             $quiz = Quiz::create([
                 'title' => $data['title'],
+                'description' => $data['description'],
+                'time' => $data['time'],
             ]);
 
             foreach ($data['questions'] as $questionData) {
@@ -77,15 +75,5 @@ final class QuizRepository implements QuizRepositoryInterface
     public function destroy(Quiz $quiz): ?bool
     {
         return DB::transaction(callback: fn() => $quiz->delete());
-    }
-
-    public function search(string $query): QuizCollection
-    {
-        $foundQuizzes = Quiz::query()
-            ->where('title', 'LIKE', "%{$query}%")
-            ->orderBy('created_at', 'desc')
-            ->paginate(5);
-
-        return new QuizCollection($foundQuizzes);
     }
 }

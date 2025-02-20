@@ -1,0 +1,1010 @@
+[
+    {
+        "title": "Basic Geography",
+        "description": "Test your knowledge of world geography",
+        "time": 20,
+        "questions": [
+            {
+                "text": "What is the capital of France?",
+                "answers": [
+                    {
+                        "text": "London",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Berlin",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Paris",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "Madrid",
+                        "isCorrect": false
+                    }
+                ]
+            },
+            {
+                "text": "Which ocean is the largest?",
+                "answers": [
+                    {
+                        "text": "Atlantic Ocean",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Pacific Ocean",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "Indian Ocean",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Arctic Ocean",
+                        "isCorrect": false
+                    }
+                ]
+            },
+            {
+                "text": "On which continent is the Sahara Desert located?",
+                "answers": [
+                    {
+                        "text": "Asia",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Africa",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "Europe",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "South America",
+                        "isCorrect": false
+                    }
+                ]
+            },
+            {
+                "text": "Which country has the largest population?",
+                "answers": [
+                    {
+                        "text": "India",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "United States",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Indonesia",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Brazil",
+                        "isCorrect": false
+                    }
+                ]
+            },
+            {
+                "text": "Which mountain range runs through South America?",
+                "answers": [
+                    {
+                        "text": "Rocky Mountains",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Alps",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Andes",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "Himalayas",
+                        "isCorrect": false
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Science Fundamentals",
+        "description": "Basic science concepts quiz",
+        "time": 15,
+        "questions": [
+            {
+                "text": "What is the chemical symbol for gold?",
+                "answers": [
+                    {
+                        "text": "Ag",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Fe",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Au",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "Cu",
+                        "isCorrect": false
+                    }
+                ]
+            },
+            {
+                "text": "What is the largest organ in the human body?",
+                "answers": [
+                    {
+                        "text": "Heart",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Brain",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Skin",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "Liver",
+                        "isCorrect": false
+                    }
+                ]
+            },
+            {
+                "text": "What force keeps planets in orbit around the Sun?",
+                "answers": [
+                    {
+                        "text": "Magnetic force",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Gravity",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "Nuclear force",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Friction",
+                        "isCorrect": false
+                    }
+                ]
+            },
+            {
+                "text": "What is the process by which plants make their own food?",
+                "answers": [
+                    {
+                        "text": "Photosynthesis",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "Respiration",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Digestion",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Fermentation",
+                        "isCorrect": false
+                    }
+                ]
+            },
+            {
+                "text": "What is the smallest unit of matter?",
+                "answers": [
+                    {
+                        "text": "Cell",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Molecule",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Atom",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "Electron",
+                        "isCorrect": false
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "World History",
+        "description": "Test your knowledge of historical events",
+        "time": 25,
+        "questions": [
+            {
+                "text": "In which year did World War II end?",
+                "answers": [
+                    {
+                        "text": "1943",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "1944",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "1945",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "1946",
+                        "isCorrect": false
+                    }
+                ]
+            },
+            {
+                "text": "Who was the first President of the United States?",
+                "answers": [
+                    {
+                        "text": "Thomas Jefferson",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "George Washington",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "John Adams",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Benjamin Franklin",
+                        "isCorrect": false
+                    }
+                ]
+            },
+            {
+                "text": "Which ancient civilization built the pyramids of Giza?",
+                "answers": [
+                    {
+                        "text": "Greeks",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Romans",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Egyptians",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "Persians",
+                        "isCorrect": false
+                    }
+                ]
+            },
+            {
+                "text": "When did the Industrial Revolution begin?",
+                "answers": [
+                    {
+                        "text": "Late 18th century",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "Mid 17th century",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Early 19th century",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Late 19th century",
+                        "isCorrect": false
+                    }
+                ]
+            },
+            {
+                "text": "Who wrote 'The Communist Manifesto'?",
+                "answers": [
+                    {
+                        "text": "Vladimir Lenin",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Karl Marx and Friedrich Engels",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "Joseph Stalin",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Leon Trotsky",
+                        "isCorrect": false
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Technology Basics",
+        "description": "Test your knowledge of modern technology",
+        "time": 20,
+        "questions": [
+            {
+                "text": "What does CPU stand for?",
+                "answers": [
+                    {
+                        "text": "Central Processing Unit",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "Computer Personal Unit",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Central Program Utility",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Computer Processing Utility",
+                        "isCorrect": false
+                    }
+                ]
+            },
+            {
+                "text": "Which company created the iPhone?",
+                "answers": [
+                    {
+                        "text": "Samsung",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Microsoft",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Apple",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "Google",
+                        "isCorrect": false
+                    }
+                ]
+            },
+            {
+                "text": "What does WiFi stand for?",
+                "answers": [
+                    {
+                        "text": "Wireless Fidelity",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "Wired Fiber",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Wireless Fiber",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Wireless Finder",
+                        "isCorrect": false
+                    }
+                ]
+            },
+            {
+                "text": "Which programming language is known for being used in web browsers?",
+                "answers": [
+                    {
+                        "text": "Python",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Java",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "JavaScript",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "C++",
+                        "isCorrect": false
+                    }
+                ]
+            },
+            {
+                "text": "What is the name for a computer program that spreads by copying itself?",
+                "answers": [
+                    {
+                        "text": "Bug",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Virus",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "Worm",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Trojan",
+                        "isCorrect": false
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Literature Classics",
+        "description": "Test your knowledge of classic literature",
+        "time": 15,
+        "questions": [
+            {
+                "text": "Who wrote 'Romeo and Juliet'?",
+                "answers": [
+                    {
+                        "text": "Charles Dickens",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "William Shakespeare",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "Jane Austen",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Mark Twain",
+                        "isCorrect": false
+                    }
+                ]
+            },
+            {
+                "text": "What is the name of the main character in '1984'?",
+                "answers": [
+                    {
+                        "text": "Winston Smith",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "John Smith",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "William Smith",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Walter Smith",
+                        "isCorrect": false
+                    }
+                ]
+            },
+            {
+                "text": "Who wrote 'Pride and Prejudice'?",
+                "answers": [
+                    {
+                        "text": "Emily Brontë",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Charlotte Brontë",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Jane Austen",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "Virginia Woolf",
+                        "isCorrect": false
+                    }
+                ]
+            },
+            {
+                "text": "What is the name of Don Quixote's horse?",
+                "answers": [
+                    {
+                        "text": "Rocinante",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "Shadowfax",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Bucephalus",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Pegasus",
+                        "isCorrect": false
+                    }
+                ]
+            },
+            {
+                "text": "Who wrote 'The Great Gatsby'?",
+                "answers": [
+                    {
+                        "text": "Ernest Hemingway",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "F. Scott Fitzgerald",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "John Steinbeck",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "William Faulkner",
+                        "isCorrect": false
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Sports Trivia",
+        "description": "Test your knowledge of various sports",
+        "time": 15,
+        "questions": [
+            {
+                "text": "How many players are on a standard soccer team on the field?",
+                "answers": [
+                    {
+                        "text": "9",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "10",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "11",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "12",
+                        "isCorrect": false
+                    }
+                ]
+            },
+            {
+                "text": "In which sport would you perform a slam dunk?",
+                "answers": [
+                    {
+                        "text": "Football",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Basketball",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "Tennis",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Hockey",
+                        "isCorrect": false
+                    }
+                ]
+            },
+            {
+                "text": "How many points is a touchdown worth in American football?",
+                "answers": [
+                    {
+                        "text": "3",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "4",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "6",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "7",
+                        "isCorrect": false
+                    }
+                ]
+            },
+            {
+                "text": "Which country invented table tennis?",
+                "answers": [
+                    {
+                        "text": "China",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Japan",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "England",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "United States",
+                        "isCorrect": false
+                    }
+                ]
+            },
+            {
+                "text": "How many rings are on the Olympic flag?",
+                "answers": [
+                    {
+                        "text": "4",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "5",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "6",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "7",
+                        "isCorrect": false
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Polish Language Basics",
+        "description": "Test your knowledge of basic Polish language concepts",
+        "time": 15,
+        "questions": [
+            {
+                "text": "What is the Polish word for 'hello'?",
+                "answers": [
+                    {
+                        "text": "Czesc",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "Dziekuje",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Prosze",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Tak",
+                        "isCorrect": false
+                    }
+                ]
+            },
+            {
+                "text": "Which of the following means 'thank you' in Polish?",
+                "answers": [
+                    {
+                        "text": "Prosze",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Przepraszam",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Dziekuje",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "Nie",
+                        "isCorrect": false
+                    }
+                ]
+            },
+            {
+                "text": "How do you say 'yes' in Polish?",
+                "answers": [
+                    {
+                        "text": "Nie",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Tak",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "Moze",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Dobrze",
+                        "isCorrect": false
+                    }
+                ]
+            },
+            {
+                "text": "Which of these is the Polish word for 'goodbye'?",
+                "answers": [
+                    {
+                        "text": "Czesc",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Do widzenia",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "Dziekuje",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Prosze",
+                        "isCorrect": false
+                    }
+                ]
+            },
+            {
+                "text": "What is the Polish word for 'please'?",
+                "answers": [
+                    {
+                        "text": "Przepraszam",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Prosze",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "Tak",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Nie",
+                        "isCorrect": false
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "English Language Basics",
+        "description": "Test your knowledge of basic English language concepts",
+        "time": 15,
+        "questions": [
+            {
+                "text": "What is the English word for 'bonjour'?",
+                "answers": [
+                    {
+                        "text": "Hello",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "Goodbye",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Please",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Thank you",
+                        "isCorrect": false
+                    }
+                ]
+            },
+            {
+                "text": "Which of the following means 'thank you' in English?",
+                "answers": [
+                    {
+                        "text": "Sorry",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Please",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Thank you",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "Yes",
+                        "isCorrect": false
+                    }
+                ]
+            },
+            {
+                "text": "How do you say 'yes' in English?",
+                "answers": [
+                    {
+                        "text": "No",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Yes",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "Maybe",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Okay",
+                        "isCorrect": false
+                    }
+                ]
+            },
+            {
+                "text": "Which of these is the English word for 'au revoir'?",
+                "answers": [
+                    {
+                        "text": "Hello",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Goodbye",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "Thank you",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Please",
+                        "isCorrect": false
+                    }
+                ]
+            },
+            {
+                "text": "What is the English word for 's'il vous plaît'?",
+                "answers": [
+                    {
+                        "text": "Sorry",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Please",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "Yes",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "No",
+                        "isCorrect": false
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Football Trivia",
+        "description": "Test your knowledge of football (soccer) facts and history",
+        "time": 15,
+        "questions": [
+            {
+                "text": "Which country won the FIFA World Cup in 2018?",
+                "answers": [
+                    {
+                        "text": "Germany",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "France",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "Brazil",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Argentina",
+                        "isCorrect": false
+                    }
+                ]
+            },
+            {
+                "text": "Who is known as 'The King of Football'?",
+                "answers": [
+                    {
+                        "text": "Cristiano Ronaldo",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Lionel Messi",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Pelé",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "Diego Maradona",
+                        "isCorrect": false
+                    }
+                ]
+            },
+            {
+                "text": "Which club has won the most UEFA Champions League titles?",
+                "answers": [
+                    {
+                        "text": "Manchester United",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "FC Barcelona",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Real Madrid",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "Bayern Munich",
+                        "isCorrect": false
+                    }
+                ]
+            },
+            {
+                "text": "Which player has won the most Ballon d'Or awards?",
+                "answers": [
+                    {
+                        "text": "Cristiano Ronaldo",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Lionel Messi",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "Pelé",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Michel Platini",
+                        "isCorrect": false
+                    }
+                ]
+            },
+            {
+                "text": "Which country hosted the first-ever FIFA World Cup in 1930?",
+                "answers": [
+                    {
+                        "text": "Brazil",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Italy",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "Uruguay",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "Germany",
+                        "isCorrect": false
+                    }
+                ]
+            }
+        ]
+    }
+]

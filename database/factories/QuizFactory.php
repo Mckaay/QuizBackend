@@ -18,6 +18,8 @@ final class QuizFactory extends Factory
     {
         return [
             'title' => $this->faker->words(1, true),
+            'description' => $this->faker->words(5, true),
+            'time' => $this->faker->numberBetween(1, 100),
         ];
     }
 }

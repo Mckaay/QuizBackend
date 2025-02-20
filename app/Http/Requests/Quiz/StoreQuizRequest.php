@@ -15,6 +15,8 @@ final class StoreQuizRequest extends FormRequest
     {
         return [
             'title' => 'required|unique:quizzes|max:255|string',
+            'description' => 'required|string|max:60',
+            'time' => 'required|integer|max:2000',
             'questions' => 'required|array|min:2|max:10',
             'questions.*.content' => 'required|string',
             'questions.*.answers' => 'required|array|min:4|max:5',
@@ -39,9 +41,9 @@ final class StoreQuizRequest extends FormRequest
     public function failedValidation(Validator $validator): void
     {
         throw new HttpResponseException(response: response()->json([
-            'success'   => false,
-            'message'   => 'Validation errors',
-            'data'      => $validator->errors(),
+            'success' => false,
+            'message' => 'Validation errors',
+            'data' => $validator->errors(),
         ]));
     }
 }

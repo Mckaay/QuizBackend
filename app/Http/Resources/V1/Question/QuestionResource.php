@@ -17,8 +17,8 @@ final class QuestionResource extends JsonResource
         return [
             'id' => $this->id,
             'quiz_id' => $this->quiz_id,
-            'answers' => AnswerResource::collection(resource: $this->whenLoaded(relationship: 'answers')),
             'content' => $this->content,
+            'answers' => AnswerResource::collection(resource: $this->whenLoaded(relationship: 'answers')),
         ];
     }
 }
