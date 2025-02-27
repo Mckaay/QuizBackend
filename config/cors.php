@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 return [
 
-    /*
+    /*https://quiz-api-main-l9jw3c.laravel.cloud/
     |--------------------------------------------------------------------------
     | Cross-Origin Resource Sharing (CORS) Configuration
     |--------------------------------------------------------------------------
@@ -27,7 +27,7 @@ return [
 
     'allowed_headers' => ['*'],
 
-    'exposed_headers' => [],
+    'exposed_headers' => ['XSRF-TOKEN'],
 
     'max_age' => 0,
 
