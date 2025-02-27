@@ -96,7 +96,7 @@ final class QuizTest extends TestCase
         $quiz = Quiz::first();
         $this->assertEquals(0, $quiz->timesPlayed);
         $this->get(route('quiz:increment', [$quiz->id]))->assertStatus(204);
-        $updatedQuiz = Quiz::first();
+        $updatedQuiz = Quiz::where('id', $quiz->id)->firstOrFail();
         $this->assertEquals(1, $updatedQuiz->timesPlayed);
     }
 

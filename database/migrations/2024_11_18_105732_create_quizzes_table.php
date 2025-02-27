@@ -13,7 +13,7 @@ return new class () extends Migration {
             $table->ulid('id')->primary();
             $table->string('title', 255);
             $table->integer('time');
-            $table->string('description', 60);
+            $table->string('description', 80);
             $table->bigInteger('timesPlayed')->default(0);
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
