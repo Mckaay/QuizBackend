@@ -17,6 +17,7 @@ final class QuizRepository implements QuizRepositoryInterface
                 $query->where('title', 'like', '%' . $searchQuery . '%');
             })
             ->withCount('questions')
+            ->orderBy('timesPlayed', 'desc')
             ->paginate(5);
     }
 
