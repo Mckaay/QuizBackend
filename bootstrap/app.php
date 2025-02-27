@@ -12,5 +12,7 @@ return Application::configure(basePath: dirname(__DIR__))
         api: __DIR__ . '/../routes/api/api.php',
         health: '/up',
     )
-    ->withMiddleware(function (Middleware $middleware): void {})
+    ->withMiddleware(function (Middleware $middleware): void {
+        $middleware->statefulApi();
+    })
     ->withExceptions(function (Exceptions $exceptions): void {})->create();
